@@ -21,9 +21,17 @@
     <title>
         <%= config.title %>
     </title>
-    <%- css('libs/highlight/styles/monokai-sublime.css') %>
-    <%- css('libs/font-awesome/css/font-awesome.min.css') %>
-    <%- css('libs/zpix/zpix.css') %>
-    <%- css('css/style.css') %>
-    <%- js('js/theme.js') %>
+    <% if (theme.cdn.enabled) { %>
+      <link rel="stylesheet" href="<%= theme.cdn.url %>/libs/highlight/styles/monokai-sublime.css">
+      <link rel="stylesheet" href="<%= theme.cdn.url %>/libs/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="<%= theme.cdn.url %>/libs/zpix/zpix.css">
+      <link rel="stylesheet" href="<%= theme.cdn.url %>/css/style.css">
+      <script src="<%= theme.cdn.url %>/js/theme.js"></script>
+    <% } else { %>
+      <%- css('libs/highlight/styles/monokai-sublime') %>
+      <%- css('libs/font-awesome/css/font-awesome.min') %>
+      <%- css('libs/zpix/zpix') %>
+      <%- css('css/style') %>
+      <%- js('js/theme.js') %>
+    <% } %>
 </head>

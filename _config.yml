@@ -19,3 +19,7 @@ valine:
 
 highlight:
   enable: false
+
+cdn:
+  enabled: true
+  url: https://cdn.jsdelivr.net/gh/journey-ad/nocilol.me
