@@ -1,4 +1,6 @@
 .posts
+    width: 900px;
+
     .replay-btn
         background-color: #4b5e7b;
         width: 40px;
@@ -14,10 +16,78 @@
         font-size: 24px;
         line-height: 40px;
         margin-bottom: 10px;
+
+    .outdated-notify
+        display: none;
+        padding: 10px 14px;
+        margin: 20px 0;
+        color: #333;
+        background: #ffec6f;
+        font-size: 18px;
     
     .post-content
         a
-             color: #699be9;
+            color: #699be9;
+        pre
+            position: relative;
+            background: #21252b;
+            border-radius: 5px;
+            font: 15px/22px "Microsoft YaHei","Arial",Sans-Serif;
+            line-height: 1.6;
+            max-width: 800px;
+            max-height: 500px;
+            margin: 0 auto;
+            margin-bottom: 1.6em;
+            overflow: hidden;
+            text-shadow: none;
+            color: #000;
+            padding-top: 30px;
+            padding-right: 2px;
+            padding-bottom: 4px;
+            box-shadow: 0 10px 30px 0px rgba(0,0,0,.4);
+
+            &:before
+                content: " ";
+                position: absolute;
+                border-radius: 50%;
+                background: #fc625d;
+                width: 12px;
+                height: 12px;
+                left: 12px;
+                margin-top: -18px;
+                box-shadow: 20px 0 #fdbc40,40px 0 #35cd4b;
+                z-index: 2;
+
+            ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+            }
+            ::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+            }
+            ::-webkit-scrollbar-thumb {
+            background: #e1e1e1;
+            border: 0px none #ffffff;
+            border-radius: 50px;
+            }
+            ::-webkit-scrollbar-track {
+            background: #666666;
+            border: 0px none #ffffff;
+            border-radius: 50px;
+            }
+            ::-webkit-scrollbar-corner {
+            background: transparent;
+            }
+
+            code
+                display: block;
+                width: 100%;
+                max-height: 460px;
+                overflow: auto;
+                padding: 0;
+                padding-left: 6px;
+                background: none;
 
     .fhr
         margin-top: 20px;

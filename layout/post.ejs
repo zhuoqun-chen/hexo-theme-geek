@@ -1,11 +1,18 @@
 <div class="hd posts">
-    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <a class="back" href="javascript:void(0);" target="_self"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
     <div class="post-title">
         <p>
             <%= page.title %>
         </p>
         <hr>
     </div>
+
+    <% if (page.outdated === undefined || page.outdated === true) {%>
+        <div class="outdated-notify">
+            本文发布于 <span class="num">-</span> 天前，文中所描述的信息可能已发生改变或是过时，请注意辨别
+        </div>
+    <% } %>
+
     <div class="post-content">
         <%- page.content %>
     </div>
@@ -14,4 +21,8 @@
         <hr class="fhr">
         <div id="vcomments"></div>
     <% } %>
+
+    <script>
+        var pub_date = <%- page.date %>;
+    </script>
 </div>
