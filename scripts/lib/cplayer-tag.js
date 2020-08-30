@@ -139,6 +139,9 @@ module.exports = function (args, contents) {
                     c-player .cp-play-button .cp-play-icon.cp-play-icon-paused {
                       margin-left: 0.8em;
                     }
+                    c-player .cp-drop-down-menu {
+                      line-height: 1.85;
+                    }
                     @media (max-width: 768px) {
                       c-player{
                         font-size: 12px !important;
