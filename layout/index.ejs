@@ -1,30 +1,64 @@
 <div class="hd logodiv">
     <%- image_tag('https://count.getloli.com/get/@jad-blog?theme=moebooru',{class: 'logopng'}) %>
-    <p class="logot"><span class="logo_1">&lt;</span><span class="logo_2">/</span><span class="logo_3">#</span> <a href="/" title="<%= theme.logo_title %>"><%= theme.logo_title %></a> <span class="logo_3">#</span><span class="logo_2">/</span><span class="logo_1">&gt;</span></p>
+    <p class="logot">
+        <span class="logo_1">&lt;</span>
+        <span class="logo_2">/</span>
+        <span class="logo_3">#</span>
+        <a class="site-name" href="/"
+           title="<%= theme.logo_title %>">
+            <ruby>
+                恶
+                <rp>(</rp>
+                <rt>e</rt>
+                <rp>)</rp>
+                魔
+                <rp>(</rp>
+                <rt>m</rt>
+                <rp>)</rp>
+                萝
+                <rp>(</rp>
+                <rt>lo</rt>
+                <rp>)</rp>
+                莉
+                <rp>(</rp>
+                <rt>li</rt>
+                <rp>)</rp>
+                控
+                <rp>(</rp>
+                <rt>con</rt>
+                <rp>)</rp>
+            </ruby>
+        </a>
+        <span class="logo_3">#</span>
+        <span class="logo_2">/</span>
+        <span class="logo_1">&gt;</span>
+    </p>
 </div>
 <%- partial('_partial/nav') %>
 <div class="hd">
     <% var last; %>
     <% page.posts.each(function (post) { %>
-        <% var year = post.date.year(); %>
-        <% if (last != year){ %>
-            <div class="titlex">
-                <p><span class="title-year">#</span>
-                    <%= year %>
-                </p>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+    <div class="titlex">
+        <p><span class="title-year">#</span>
+            <%= year %>
+        </p>
+    </div>
+    <% last = year; %>
+    <% } %>
+    <a class="flink"
+       href="<%- url_for(post.path) %>">
+        <div class="list">
+            <div class="postname">
+                <%= post.title %>
             </div>
-            <% last = year; %>
-        <% } %>
-        <a class="flink" href="<%- url_for(post.path) %>">
-            <div class="list">
-                <div class="postname">
-                    <%= post.title %>
-                </div>
-                <div class="posttime">
-                    <%- full_date(post.date, 'MMMM Do') %>
-                </div>
+            <div class="posttime">
+                <%- full_date(post.date, 'MMMM Do') %>
             </div>
-        </a>
+        </div>
+    </a>
     <% }) %>
-    <a class="more" href="/archives">More >></a>
+    <a class="more"
+       href="/archives">More >></a>
 </div>
