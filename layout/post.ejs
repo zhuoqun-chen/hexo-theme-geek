@@ -1,11 +1,7 @@
 <div class="hd posts">
     <a class="back" href="javascript:void(0);" target="_self"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
-    <div class="post-title">
-        <p>
-            <%= page.title %>
-        </p>
-        <hr>
-    </div>
+    <h1 class="post-title"><%= page.title %></h1>
+    <hr>
 
     <% if (page.outdated === undefined || page.outdated === true) {%>
         <div class="outdated-notify">
@@ -23,6 +19,6 @@
     <% } %>
 
     <script>
-        var pub_date = <%- page.date %>;
+        var pub_date = <%- page.date || null %>;
     </script>
 </div>
