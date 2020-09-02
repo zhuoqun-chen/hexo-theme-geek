@@ -18,7 +18,7 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="shortcut icon" href="/favicon.png" type="image/png">
-    <title><%= `${page.title} - ${config.title}` || config.title %></title>
+    <title><%= page.title ? `${page.title} - ${config.title}` : config.title %></title>
     <% if (theme.cdn.enabled) { %>
       <link rel="stylesheet" href="<%= theme.cdn.url %>/css/style.css">
       <link rel="stylesheet" href="<%= theme.cdn.url %>/libs/highlight/styles/monokai-sublime.css">
