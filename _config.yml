@@ -23,3 +23,6 @@ highlight:
 cdn:
   enabled: true
   url: https://cdn.jsdelivr.net/gh/journey-ad/nocilol.me
+
+analytics:
+  googleId: UA-71903189-1
