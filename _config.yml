@@ -1,4 +1,4 @@
-logo_title: 恶魔萝莉控
+logo_title: 夏小正的鲜小海
 
 style: white
 
@@ -8,21 +8,22 @@ menu:
   归档: /archives
   友链: /links
   关于: /about
-  Github: https://github.com/journey-ad
+  Github: https://github.com/zhuoqun-chen
 
 # 做了域名限制，请改成自己的 KEY
 # 若关闭valine 设置enable为false
 valine:
   enable: true
-  appId: CaQKuPQDfnfPFUkTw6MMt8ME-gzGzoHsz
-  appKey: uWuwGS1xiIwh3zHKENc7ubyL
+  appId: fB9hqbiyAbuyAH2YJpybBIPz-gzGzoHsz
+  appKey: 28HDb9xLrH5B8g5MhkEU8Cwa
 
 highlight:
   enable: false
 
 cdn:
-  enabled: true
+  enabled: false
   url: https://cdn.jsdelivr.net/gh/journey-ad/nocilol.me
 
 analytics:
-  googleId: UA-71903189-1
+  enabled: false
+  googleId: G-6DBJ1VN2JX
