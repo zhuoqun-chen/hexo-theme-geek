@@ -21,8 +21,8 @@ highlight:
   enable: false
 
 cdn:
-  enabled: false
-  url: https://cdn.jsdelivr.net/gh/journey-ad/nocilol.me
+  enabled: true
+  url: https://cdn.jsdelivr.net/gh/zhuoqun-chen/zqchen.me
 
 analytics:
   enabled: false
