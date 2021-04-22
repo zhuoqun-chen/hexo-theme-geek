@@ -25,5 +25,5 @@ cdn:
   url: https://cdn.jsdelivr.net/gh/zhuoqun-chen/zqchen.me
 
 analytics:
-  enabled: false
+  enabled: true
   googleId: G-6DBJ1VN2JX
